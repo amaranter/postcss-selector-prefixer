@@ -11,8 +11,8 @@ function run(t, input, output, opts = { }) {
         });
 }
 
-test('should return prefix with 1 class selector', t => {
-    return run(t, '.a{ }', 'testPrefix_.a{ }', { prefix: 'testPrefix_' });
+test('should return prefix with 1 selector class', t => {
+    return run(t, '.a{ }', '.a{ }', { prefix: 'testPrefix_' });
 });
 
 
