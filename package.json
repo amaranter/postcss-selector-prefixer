@@ -1,0 +1,31 @@
+{
+  "name": "postcss-selector-prefixer",
+  "version": "1.0.0",
+  "description": "[PostCSS] plugin for selector prefixer.",
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "selector-prefixer",
+    "prefixer",
+    "selector",
+    "postcss-selector-prefixer"
+  ],
+  "author": "ronnyamarante <ronnyonrails@gmail.com>",
+  "license": "MIT",
+  "repository": "ronnyamarante/postcss-selector-prefixer",
+  "bugs": {
+    "url": "https://github.com/ronnyamarante/postcss-selector-prefixer/issues"
+  },
+  "homepage": "https://github.com/ronnyamarante/postcss-selector-prefixer",
+  "dependencies": {
+    "postcss": "^5.0.10"
+  },
+  "devDependencies": {
+    "ava": "^0.7.0",
+    "eslint": "^1.10.2"
+  },
+  "scripts": {
+    "test": "ava && eslint *.js"
+  }
+}
