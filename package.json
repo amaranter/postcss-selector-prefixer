@@ -22,8 +22,6 @@
     "postcss": "^5.0.10"
   },
   "devDependencies": {
-    "ava": "^0.7.0",
-    "eslint": "^1.10.2",
     "tap-spec": "^4.1.1",
     "tape": "^4.2.2"
   },
