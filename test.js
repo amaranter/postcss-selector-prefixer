@@ -1,18 +1,32 @@
-import postcss from 'postcss';
-import test    from 'ava';
+var test    = require('tape');
+var postcss = require('postcss');
+var plugin  = require('./');
+var name    = require('./package.json').name;
 
-import plugin from './index.js';
+var tests   = [
+    {
+        message: 'should not change the output',
+        fixture: '.a{ }',
+        expected: '.a{ }'
+    }
+];
 
-function run(t, input, output, opts = { }) {
-    return postcss([ plugin(opts) ]).process(input)
-        .then( result => {
-            t.same(result.css, output);
-            t.same(result.warnings().length, 0);
-        });
+function process (css, options) {
+    return postcss(plugin(options)).process(css).css;
 }
 
-test('should return prefix with 1 selector class', t => {
-    return run(t, '.a{ }', '.a{ }', { prefix: 'testPrefix_' });
+test(name, function (t) {
+    t.plan(tests.length);
+
+    tests.forEach(function (test) {
+        var options = test.options || {};
+        t.equal(process(test.fixture, options), test.expected, test.message);
+    });
+
 });
 
-
+test('should use the postcss plugin api', function (t) {
+    t.plan(2);
+    t.ok(plugin().postcssVersion, 'should be able to access version');
+    t.equal(plugin().postcssPlugin, name, 'should be able to access name');
+});
