@@ -5,9 +5,40 @@ var name    = require('./package.json').name;
 
 var tests   = [
     {
-        message: 'should not change the output',
-        fixture: '.a{ }',
-        expected: '.a{ }'
+        message: 'when use class selector with space',
+        fixture: '.a{ } .abc{ }',
+        expected: '.myPrefix_a{ } .myPrefix_abc{ }',
+        options: {prefix: 'myPrefix_'}
+    },
+    {
+        message: 'when use class selector without space',
+        fixture: '.a{ }.abc{ }',
+        expected: '.myPrefix_a{ }.myPrefix_abc{ }',
+        options: {prefix: 'myPrefix_'}
+    },
+    {
+        message: 'when use id selector with space',
+        fixture: '#a{ } #abc{ }',
+        expected: '#myPrefix_a{ } #myPrefix_abc{ }',
+        options: {prefix: 'myPrefix_'}
+    },
+    {
+        message: 'when use id selector without space',
+        fixture: '#a{ }#abc{ }',
+        expected: '#myPrefix_a{ }#myPrefix_abc{ }',
+        options: {prefix: 'myPrefix_'}
+    },
+    {
+        message: 'when use id and class selector with space',
+        fixture: '#a{ } .abc{ }',
+        expected: '#myPrefix_a{ } .myPrefix_abc{ }',
+        options: {prefix: 'myPrefix_'}
+    },
+    {
+        message: 'when use id and class selector without space',
+        fixture: '#a{ }.abc{ }',
+        expected: '#myPrefix_a{ }.myPrefix_abc{ }',
+        options: {prefix: 'myPrefix_'}
     }
 ];
 
