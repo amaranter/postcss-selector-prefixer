@@ -5,6 +5,12 @@ var name    = require('./package.json').name;
 
 var tests   = [
     {
+        message: 'when use any selector and subtract signal',
+        fixture: '#a-abc{ } .abc-def{ }',
+        expected: '#myPrefix_a-abc{ } .myPrefix_abc-def{ }',
+        options: {prefix: 'myPrefix_'}
+    },
+    {
         message: 'when use class selector with space',
         fixture: '.a{ } .abc{ }',
         expected: '.myPrefix_a{ } .myPrefix_abc{ }',
@@ -38,6 +44,30 @@ var tests   = [
         message: 'when use id and class selector without space',
         fixture: '#a{ }.abc{ }',
         expected: '#myPrefix_a{ }.myPrefix_abc{ }',
+        options: {prefix: 'myPrefix_'}
+    },
+    {
+        message: 'when use id and class selector with child combinator',
+        fixture: '#a > .abc{ }',
+        expected: '#myPrefix_a > .myPrefix_abc{ }',
+        options: {prefix: 'myPrefix_'}
+    },
+    {
+        message: 'when use id and class selector with adjacent sibling combinator',
+        fixture: '#a + .abc{ }',
+        expected: '#myPrefix_a + .myPrefix_abc{ }',
+        options: {prefix: 'myPrefix_'}
+    },
+    {
+        message: 'when use id and class selector with general sibling combinator',
+        fixture: '#a ~ .abc{ }',
+        expected: '#myPrefix_a ~ .myPrefix_abc{ }',
+        options: {prefix: 'myPrefix_'}
+    },
+    {
+        message: 'when use id and class selector with general sibling combinator',
+        fixture: '#a:hover { }',
+        expected: '#myPrefix_a:hover { }',
         options: {prefix: 'myPrefix_'}
     }
 ];
