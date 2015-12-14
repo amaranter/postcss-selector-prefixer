@@ -20,7 +20,7 @@ module.exports = postcss.plugin('postcss-selector-prefixer', function (opts) {
 
         css.walkRules(function (rule) {
         	var selector = rule.selector,
-        		matches = selector.match( /(\s*?[#\.][-\w\d\s,\>\~\+]+\s*?)/g );
+        		matches = selector.match( /(\s*?[#\.][-\w\d\s,\>\~\+\:\&]+\s*?)/g );
 
         	for(var i = 0; i < matches.length; i++){
         		matches[i] = prepare(matches[i], selectors, prefix);
