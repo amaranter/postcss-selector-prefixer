@@ -19,6 +19,8 @@
   color: red;
 }
 ```
+## Demo
+![Gif Demo](https://cloud.githubusercontent.com/assets/3427885/11800314/abf1ff34-a2c2-11e5-84fa-5be55d189006.gif)
 
 ## Usage
 
