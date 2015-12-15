@@ -65,7 +65,7 @@ var tests   = [
         options: {prefix: 'myPrefix_'}
     },
     {
-        message: 'when use id and class selector with general sibling combinator',
+        message: 'when use id and class selector with :hover selector',
         fixture: '#a:hover { }',
         expected: '#myPrefix_a:hover { }',
         options: {prefix: 'myPrefix_'}
