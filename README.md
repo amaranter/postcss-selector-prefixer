@@ -3,8 +3,8 @@
 [PostCSS] plugin for selector prefixer.
 
 [PostCSS]: https://github.com/postcss/postcss
-[ci-img]:  https://travis-ci.org/ronnyamarante/postcss-selector-prefixer.svg
-[ci]:      https://travis-ci.org/ronnyamarante/postcss-selector-prefixer
+[ci-img]:  https://travis-ci.org/amaranter/postcss-selector-prefixer.svg
+[ci]:      https://travis-ci.org/amaranter/postcss-selector-prefixer
 
 ```css
 .foo {
