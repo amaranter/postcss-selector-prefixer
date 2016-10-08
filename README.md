@@ -1,11 +1,11 @@
-# postcss-selector-prefixer [![Build Status][ci-img]][ci]
+# postcss-selector-prefixer [![Build Status][ci-img]][ci] [![npm version](https://badge.fury.io/js/postcss-selector-prefixer.svg)](https://badge.fury.io/js/postcss-selector-prefixer)
 
 [PostCSS] plugin for selector prefixer.
 
 [PostCSS]: https://github.com/postcss/postcss
 [ci-img]:  https://travis-ci.org/amaranter/postcss-selector-prefixer.svg
 [ci]:      https://travis-ci.org/amaranter/postcss-selector-prefixer
-[![npm version](https://badge.fury.io/js/postcss-selector-prefixer.svg)](https://badge.fury.io/js/postcss-selector-prefixer)
+
 
 ```css
 .foo {
