@@ -1,6 +1,6 @@
 {
   "name": "postcss-selector-prefixer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "[PostCSS] plugin for selector prefixer.",
   "keywords": [
     "postcss",
