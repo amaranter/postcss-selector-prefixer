@@ -1,0 +1,11 @@
+body {
+    color: purple;
+}
+
+.myPrefix_teste {
+    color: blue;
+}
+
+#myPrefix_teste {
+    color: red;
+}
